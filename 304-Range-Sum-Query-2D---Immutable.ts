@@ -1,3 +1,5 @@
+https://leetcode.com/problems/range-sum-query-2d-immutable/solutions/1204168/js-python-java-c-easy-4-rectangles-dp-solution-w-explanation
+
 class NumMatrix {
     dp: number[][] = [] //sum of rectangle upto (i)(j)
     constructor(matrix: number[][]) {
