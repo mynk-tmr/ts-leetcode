@@ -1,14 +1,11 @@
 class NumArray {
-    run_sum: number[] = []
-    constructor(private nums: number[]) {
-        let sum = 0;
-        for (let i = 0; i < this.nums.length; i++) {
-            sum += this.nums[i]
-            this.run_sum[i] = sum;
-        }
+    dp = []
+    constructor(nums) {
+        this.dp[0] = 0; //query is inclusive of r, so we gotta go r+1
+        for (let i = 1; i <= nums.length; i++)
+            this.dp[i] = this.dp[i - 1] + nums[i-1]
     }
-
-    sumRange(left: number, right: number): number {
-        return this.run_sum[right] - this.run_sum[left] + this.nums[left]
+    sumRange(l, r) {
+        return this.dp[r + 1] - this.dp[l]
     }
 }
