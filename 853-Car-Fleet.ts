@@ -1,3 +1,7 @@
+//convert this problem to NGE by using time taken by each car for comparison
+//a slower car (big time) will pop faster car
+//cars(fleet) left in stack have No NGE 
+
 function carFleet(target: number, position: number[], speed: number[]): number {
     const cars = [] as { pos: number, time: number }[]
     position.forEach((pos, i) => {
